@@ -57,7 +57,7 @@ const Index = () => {
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-body">
+            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-body">
               <a href="tel:4343091753">
                 <Phone className="h-4 w-4 mr-2" />
                 Call 434-309-1753
