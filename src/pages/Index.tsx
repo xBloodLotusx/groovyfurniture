@@ -48,9 +48,10 @@ const Index = () => {
             <span className="block">and God's blessings</span>
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2 md:mt-4">
-            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-body h-10 px-4 text-sm md:h-12 md:px-8 md:text-base">
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-body h-10 px-4 text-sm md:h-12 md:px-8 md:text-base w-auto self-center">
               <Link to="/menu">
-                View Our Menu
+                <span className="block md:hidden">Menu</span>
+                <span className="hidden md:block">View Our Menu</span>
               </Link>
             </Button>
           </div>
