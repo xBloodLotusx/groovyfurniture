@@ -164,9 +164,6 @@ const Index = () => {
                 Affordable, durable, and ready for your business — right here in Lynchburg.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-elegant">
-                  <a href="#inventory">Browse Inventory</a>
-                </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                   <a href={PHONE_HREF}><Phone /> Call {PHONE}</a>
                 </Button>
