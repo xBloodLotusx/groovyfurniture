@@ -12,26 +12,19 @@ import {
   Phone, MapPin, Clock, Menu, X, Star, Home, Zap, DollarSign,
   Armchair, Monitor, LayoutGrid, Archive, Users, Tag,
   CheckCircle2, Sparkles, Truck, RefreshCw, ShieldCheck, HeartHandshake,
-  Facebook, Instagram, Mail,
+  Facebook, Mail,
 } from "lucide-react";
 
-import heroImg from "@/assets/hero-showroom.jpg";
-import catChairs from "@/assets/cat-chairs.jpg";
-import catDesks from "@/assets/cat-desks.jpg";
-import catCubicles from "@/assets/cat-cubicles.jpg";
-import catFiling from "@/assets/cat-filing.jpg";
-import catConference from "@/assets/cat-conference.jpg";
-import catUsed from "@/assets/cat-used.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import boardRoomImg from "@/assets/BoardRoomTable.jpg";
+import yellowChairImg from "@/assets/YellowChair.jpg";
+import redChairImg from "@/assets/RedChair.jpg";
+import ottomanImg from "@/assets/Ottoman.jpg";
 
 const PHONE = "(434) 845-9211";
 const PHONE_HREF = "tel:+14348459211";
+const EMAIL = "cvof@groovyfurniture.com";
 const ADDRESS = "198 Oakley Ave, Lynchburg, VA";
+const FACEBOOK_URL = "https://www.facebook.com/people/Groovy-Furniture/100077727496762/";
 
 const nav = [
   { label: "Inventory", href: "#inventory" },
@@ -42,12 +35,12 @@ const nav = [
 ];
 
 const categories = [
-  { icon: Armchair, title: "Office Chairs", img: catChairs, blurb: "Ergonomic task, executive & guest seating from leading brands." },
-  { icon: Monitor, title: "Desks & Workstations", img: catDesks, blurb: "L-shapes, U-shapes, sit-stands and traditional executive desks." },
-  { icon: LayoutGrid, title: "Cubicles & Partitions", img: catCubicles, blurb: "Modular workstations to outfit teams of any size." },
-  { icon: Archive, title: "Filing & Storage", img: catFiling, blurb: "Lateral, vertical, fireproof cabinets and bookcases." },
-  { icon: Users, title: "Conference Room", img: catConference, blurb: "Boardroom tables, executive seating and reception furniture." },
-  { icon: Tag, title: "Used & Discount", img: catUsed, blurb: "Pre-owned inventory at unbeatable prices — changes weekly." },
+  { icon: Armchair, title: "Office Chairs", img: yellowChairImg, blurb: "Ergonomic task, executive & guest seating from leading brands." },
+  { icon: Monitor, title: "Desks & Workstations", img: boardRoomImg, blurb: "L-shapes, U-shapes, sit-stands and traditional executive desks." },
+  { icon: LayoutGrid, title: "Cubicles & Partitions", img: redChairImg, blurb: "Modular workstations to outfit teams of any size." },
+  { icon: Archive, title: "Filing & Storage", img: ottomanImg, blurb: "Lateral, vertical, fireproof cabinets and bookcases." },
+  { icon: Users, title: "Conference Room", img: boardRoomImg, blurb: "Boardroom tables, executive seating and reception furniture." },
+  { icon: Tag, title: "Used & Discount", img: yellowChairImg, blurb: "Pre-owned inventory at unbeatable prices — changes weekly." },
 ];
 
 const features = [
@@ -74,7 +67,7 @@ const reviews = [
   },
 ];
 
-const gallery = [g1, g2, g3, g4, g5, g6];
+const gallery = [boardRoomImg, yellowChairImg, redChairImg, ottomanImg];
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -151,7 +144,7 @@ const Index = () => {
         {/* Hero */}
         <section className="relative isolate overflow-hidden">
           <img
-            src={heroImg}
+            src={boardRoomImg}
             alt="Central Virginia Office Furniture showroom in Lynchburg with desks, chairs, and cubicles"
             width={1920}
             height={1080}
@@ -221,9 +214,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src={g2} alt="Executive desk display" loading="lazy" width={800} height={600} className="col-span-2 aspect-[16/10] w-full rounded-xl object-cover shadow-elegant" />
-              <img src={g3} alt="Reception furniture" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
-              <img src={catChairs} alt="Office chairs" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
+              <img src={boardRoomImg} alt="Conference table display" loading="lazy" width={800} height={600} className="col-span-2 aspect-[16/10] w-full rounded-xl object-cover shadow-elegant" />
+              <img src={redChairImg} alt="Red office chair" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
+              <img src={yellowChairImg} alt="Yellow office chair" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
             </div>
           </div>
         </section>
@@ -252,7 +245,7 @@ const Index = () => {
                     <h3 className="text-lg font-bold text-primary">{c.title}</h3>
                     <p className="mt-1.5 text-sm text-muted-foreground">{c.blurb}</p>
                     <Button asChild variant="link" className="mt-2 h-auto p-0 text-accent hover:text-accent/80">
-                      <a href={PHONE_HREF}>View Options →</a>
+                      <a href={PHONE_HREF}>Inquire Now →</a>
                     </Button>
                   </div>
                 </Card>
@@ -453,6 +446,15 @@ const Index = () => {
                 </div>
                 <div className="flex gap-4">
                   <div className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-secondary text-primary">
+                    <Mail className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-primary">Email</div>
+                    <a href={`mailto:${EMAIL}`} className="text-muted-foreground hover:text-accent">{EMAIL}</a>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-secondary text-primary">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
@@ -499,24 +501,22 @@ const Index = () => {
             <ul className="mt-4 space-y-2 text-primary-foreground/85">
               <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> <a href={PHONE_HREF} className="hover:text-accent">{PHONE}</a></li>
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5" /> {ADDRESS}</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> info@cvaofficefurniture.com</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> <a href={`mailto:${EMAIL}`} className="hover:text-accent">{EMAIL}</a></li>
             </ul>
           </div>
           <div className="text-sm">
             <h3 className="font-semibold uppercase tracking-wider text-xs text-accent">Follow Us</h3>
             <div className="mt-4 flex gap-3">
-              {[Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" aria-label="Social link" className="grid h-10 w-10 place-items-center rounded-md border border-primary-foreground/20 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors">
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a href={FACEBOOK_URL} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-md border border-primary-foreground/20 hover:bg-accent hover:text-accent-foreground hover:border-accent transition-colors">
+                <Facebook className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
         <div className="border-t border-primary-foreground/10">
           <div className="container py-5 text-xs text-primary-foreground/65 flex flex-wrap justify-between gap-2">
-            <span>© {new Date().getFullYear()} Central Virginia Office Furniture. All rights reserved.</span>
-            <span>Lynchburg, VA · Locally owned & operated</span>
+            <span>&copy; {new Date().getFullYear()} Central Virginia Office Furniture. All rights reserved.</span>
+            <span>Lynchburg, VA &middot; Locally owned &amp; operated</span>
           </div>
         </div>
       </footer>
