@@ -80,10 +80,6 @@ const CommunityPage = () => {
           Follow us on Facebook to see photos from our events, the store, and the Lynch Station community!
         </p>
         <a
-          href="https://www.facebook.com/carters.storeva/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-primary font-body font-semibold hover:underline"
         >
           Visit Our Facebook Page →
         </a>

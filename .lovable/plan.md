@@ -1,60 +1,63 @@
 
-# Carter's General Store & Deli — Full Website
+## Central Virginia Office Furniture — Landing Page
 
-## Brand & Design System
-- **Color palette**: Cream (#FDF6E3), Deep Forest Green (#2D5016), Warm Brown (#8B6914), Burgundy (#722F37), Soft White (#FEFCF6)
-- **Fonts**: Playfair Display for headings (rustic elegance), Inter for body (clean readability)
-- **Aesthetic**: Wood textures, warm tones, vintage accents, subtle Christian elements (small cross icon, scripture in footer)
-- **Footer scripture**: Rotating verse, e.g. *"And let us not grow weary of doing good" — Galatians 6:9*
+A single-page, modern landing site built to feel trustworthy, local, and value-focused. Clean typography, warm professional palette (deep navy + warm neutrals + a confident accent), generous spacing, and showroom-style imagery throughout.
 
-## Pages
+### Design direction
+- **Palette:** Deep navy primary, warm off-white background, charcoal text, muted gold/amber accent for CTAs and trust highlights.
+- **Type:** Strong sans-serif headlines (tight tracking), readable body sans. Clear hierarchy.
+- **Feel:** Professional but approachable — local business confidence, not corporate sterile.
+- **Imagery:** Showroom/warehouse-style photos of desks, chairs, cubicles, filing cabinets.
 
-### 1. Homepage (`/`)
-- **Hero section** with large background image area, welcoming message: *"Good food, good neighbors, and God's blessings — welcome to Carter's General Store & Deli."*
-- **Quick info bar**: Address (6376 Bedford Hwy, Lynch Station, VA 24571), phone (434-309-1753), hours, "Call Now" button
-- **Rotating specials banner** (seasonal items, daily specials)
-- **Feature cards**: Deli, General Store, Sporting Goods, Antiques, Live Bluegrass
-- **Short mission statement** about faith, family, and 145+ years of community service
-- **Testimonials section** with customer quotes (sourced from the Grit article — Vince Martin's "five-star pancakes" quote, etc.)
-- **Newsletter signup** with simple email form
+### Sections (top to bottom)
 
-### 2. Menu Page (`/menu`)
-- Organized sections: **Breakfast** (served all day!), **Lunch Specials**, **Sandwiches**, **Sides**, **Drinks**, **Desserts**
-- Highlighted signature items: Fried Bologna & Hoop Cheese Sandwich, Wagyu Beef offerings, Belgian Waffles (regular, blueberry, chocolate chip)
-- Real menu items from research: The Flat Bottom ($7.75), The Overboard ($7.95), The Outpost ($8.15), Baby Carter's ($7.75), Patty Melt ($7.95)
-- **Daily Specials** callout section
-- **Customer Favorites** badges on popular items
-- Easy-to-update data structure (menu items stored in a simple data file)
+1. **Sticky Header**
+   - Logo wordmark "Central Virginia Office Furniture"
+   - Nav: Inventory · About · Why Us · Reviews · Visit
+   - Phone number (434) 845-9211 prominent on the right + "Call Now" button
 
-### 3. About Page (`/about`)
-- **Store history** dating back to 1879 — Lewis "Big Daddy" Crawford Carter → C.L. Carter → C.P. Carter → Kyle & Cheri Goldsmith (2019)
-- **Our Values section**: Honesty, kindness, service, gratitude — rooted in Christian faith
-- **Kyle & Cheri's story**: Returning home to Campbell County to carry on the family legacy
-- **What we offer**: Deli, antiques, sporting goods, bluegrass music, canoe/kayak livery
-- Quote highlight: *"Eating at Carter's is like eating at a friend's house"*
+2. **Hero**
+   - Full-width showroom hero image with subtle dark overlay
+   - Headline: *"Quality Office Furniture for Every Workspace in Central Virginia"*
+   - Subheadline: *"Affordable, durable, and ready for your business—right here in Lynchburg."*
+   - Two CTAs: **Browse Inventory** (primary) · **Call (434) 845-9211** (outline)
+   - Trust badge row below: 🏠 Locally Owned · ⚡ Fast Pickup · 💰 Budget-Friendly Options
 
-### 4. Community & Events Page (`/community`)
-- **Regular events calendar**: Second Saturday Bluegrass, First Saturdays Gospel, Third Saturdays Hot Rods, Fourth Saturday Concerts, Friday Night Fish Fry, Bluegrass Pickin' & Pancakes Brunch
-- **Announcements section** for local events, charity drives
-- **Church partnerships** area
-- **Community photo gallery** placeholder section
-- **Annual events** (November Jeep Rally, etc.)
+3. **About**
+   - Two-column: copy on left, image collage on right
+   - Decades serving Lynchburg, expertise in office setups, space planning, furniture selection
+   - Small stats strip: Years serving · Businesses helped · Items in stock
 
-### 5. Contact Page (`/contact`)
-- Phone number, full address, embedded map placeholder
-- **Contact form** (name, email, message)
-- **Hours of operation** (Mon 8-2, Tue-Thu 8-6, Fri 8-7:30, Sat 8-6, Sun Closed)
-- **Optional prayer request form** (separate, gentle section)
+4. **Product Categories** (6-card grid)
+   - Office Chairs · Desks & Workstations · Cubicles & Partitions · Filing & Storage · Conference Room · Used & Discount
+   - Each card: image, title, short blurb, "View Options" button
 
-## Shared Components
-- **Navigation**: Sticky top nav with store name/logo, links to all pages, mobile hamburger menu
-- **Footer**: Address, phone, hours summary, Facebook link, scripture quote, "God Bless" closing message, newsletter signup
-- **Social links**: Facebook (https://www.facebook.com/carters.storeva/)
-- **Call-to-action button**: Persistent "Call Now" button on mobile
+5. **Why Choose Us**
+   - 6 feature tiles with icons covering all bullets (affordable, quality new/used, local pickup, personalized, weekly inventory, trusted)
 
-## Technical Approach
-- React Router for multi-page navigation
-- Menu data in a separate TypeScript file for easy updates
-- Responsive mobile-first design
-- Smooth scroll animations
-- All content sourced from real store information
+6. **Customer Reviews**
+   - 3 testimonial cards, Yelp-style: 5 stars, quote, name + initial avatar, location
+
+7. **Photo Gallery**
+   - Responsive masonry/grid of 6–8 showroom & warehouse images with hover zoom
+
+8. **Big CTA Band**
+   - Dark navy background, large headline *"Ready to Upgrade Your Office?"*
+   - Three buttons: Call (434) 845-9211 · Get a Quote · Visit Our Showroom
+
+9. **Location & Hours**
+   - Two-column: embedded Google Map (iframe) of 198 Oakley Ave, Lynchburg, VA
+   - Right column: address, hours (placeholder Mon–Fri 9–5, Sat 10–2, closed Sun), free on-site parking note
+
+10. **Footer**
+    - Business name, phone, address, simple social icon row (placeholder), copyright
+
+### Technical notes
+- Single page at `/` (update `src/pages/Index.tsx`)
+- Smooth-scroll anchor navigation between sections
+- Add semantic design tokens to `index.css` + `tailwind.config.ts` (navy, warm bg, gold accent) — no hardcoded colors in components
+- Responsive: mobile-first, hamburger menu on small screens
+- Generated showroom-style images for hero, gallery, and category cards
+- Lucide icons for trust badges, features, and category tiles
+- "Get a Quote" opens a simple dialog with name/email/message form (front-end only, shows success toast)
+- SEO: update `index.html` title/description for local search ("Office Furniture Lynchburg VA")

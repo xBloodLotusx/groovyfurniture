@@ -31,10 +31,6 @@ const Footer = () => {
               Serving Lynch Station since 1879. Good food, good neighbors, and God's blessings.
             </p>
             <a
-              href="https://www.facebook.com/carters.storeva/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm hover:text-secondary transition-colors"
             >
               <Facebook className="h-5 w-5" />
               Follow us on Facebook
