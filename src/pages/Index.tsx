@@ -15,10 +15,12 @@ import {
   Facebook, Mail,
 } from "lucide-react";
 
-import boardRoomImg from "@/assets/BoardRoomTable.jpg";
-import yellowChairImg from "@/assets/YellowChair.jpg";
-import redChairImg from "@/assets/RedChair.jpg";
-import ottomanImg from "@/assets/Ottoman.jpg";
+import chairsImg from "@/assets/Chairs.jpg";
+import conferenceRoomImg from "@/assets/ConferenceRoom.jpg";
+import cubiclesImg from "@/assets/Cubicles.jpg";
+import deskImg from "@/assets/Desk.jpg";
+import fileCabinetsImg from "@/assets/FileCabinets.jpg";
+import officeChairsImg from "@/assets/OfficeChairs.jpg";
 
 const PHONE = "(434) 845-9211";
 const PHONE_HREF = "tel:+14348459211";
@@ -35,12 +37,11 @@ const nav = [
 ];
 
 const categories = [
-  { icon: Armchair, title: "Office Chairs", img: yellowChairImg, blurb: "Ergonomic task, executive & guest seating from leading brands." },
-  { icon: Monitor, title: "Desks & Workstations", img: boardRoomImg, blurb: "L-shapes, U-shapes, sit-stands and traditional executive desks." },
-  { icon: LayoutGrid, title: "Cubicles & Partitions", img: redChairImg, blurb: "Modular workstations to outfit teams of any size." },
-  { icon: Archive, title: "Filing & Storage", img: ottomanImg, blurb: "Lateral, vertical, fireproof cabinets and bookcases." },
-  { icon: Users, title: "Conference Room", img: boardRoomImg, blurb: "Boardroom tables, executive seating and reception furniture." },
-  { icon: Tag, title: "Used & Discount", img: yellowChairImg, blurb: "Pre-owned inventory at unbeatable prices — changes weekly." },
+  { icon: Armchair, title: "Office Chairs", img: chairsImg, blurb: "Ergonomic task, executive & guest seating from leading brands." },
+  { icon: Monitor, title: "Desks & Workstations", img: deskImg, blurb: "L-shapes, U-shapes, sit-stands and traditional executive desks." },
+  { icon: LayoutGrid, title: "Cubicles & Partitions", img: cubiclesImg, blurb: "Modular workstations to outfit teams of any size." },
+  { icon: Archive, title: "Filing & Storage", img: fileCabinetsImg, blurb: "Lateral, vertical, fireproof cabinets and bookcases." },
+  { icon: Users, title: "Conference Room", img: conferenceRoomImg, blurb: "Boardroom tables, executive seating and reception furniture." },
 ];
 
 const features = [
@@ -67,7 +68,7 @@ const reviews = [
   },
 ];
 
-const gallery = [boardRoomImg, yellowChairImg, redChairImg, ottomanImg];
+const gallery = [conferenceRoomImg, chairsImg, cubiclesImg, deskImg, fileCabinetsImg, officeChairsImg];
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -144,7 +145,7 @@ const Index = () => {
         {/* Hero */}
         <section className="relative isolate overflow-hidden">
           <img
-            src={boardRoomImg}
+            src={conferenceRoomImg}
             alt="Central Virginia Office Furniture showroom in Lynchburg with desks, chairs, and cubicles"
             width={1920}
             height={1080}
@@ -214,9 +215,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src={boardRoomImg} alt="Conference table display" loading="lazy" width={800} height={600} className="col-span-2 aspect-[16/10] w-full rounded-xl object-cover shadow-elegant" />
-              <img src={redChairImg} alt="Red office chair" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
-              <img src={yellowChairImg} alt="Yellow office chair" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
+              <img src={conferenceRoomImg} alt="Conference table display" loading="lazy" width={800} height={600} className="col-span-2 aspect-[16/10] w-full rounded-xl object-cover shadow-elegant" />
+              <img src={chairsImg} alt="Office chairs" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
+              <img src={cubiclesImg} alt="Cubicles" loading="lazy" width={800} height={600} className="aspect-square w-full rounded-xl object-cover shadow-card" />
             </div>
           </div>
         </section>
@@ -244,9 +245,7 @@ const Index = () => {
                   <div className="p-5">
                     <h3 className="text-lg font-bold text-primary">{c.title}</h3>
                     <p className="mt-1.5 text-sm text-muted-foreground">{c.blurb}</p>
-                    <Button asChild variant="link" className="mt-2 h-auto p-0 text-accent hover:text-accent/80">
-                      <a href={PHONE_HREF}>Inquire Now →</a>
-                    </Button>
+                    {/* Inquire Now button removed as requested */}
                   </div>
                 </Card>
               ))}
